@@ -184,6 +184,32 @@ nav ul li a:hover {
         text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
     }
 }
+* Mobile responsive - Telefonlar için yazı boyutunu küçültme ve düzenleme */
+@media (max-width: 768px) {
+    /* Yazının boyutunu küçültüyoruz */
+    .moving-text {
+        font-size: 1.5rem; /* Yazı boyutunu mobilde küçültüyoruz */
+    }
+    
+    /* Mobile yazının taşmasını engellemek için hareket mesafesini ayarlıyoruz */
+    @keyframes moveText {
+        0% {
+            transform: translateX(-80%); /* Başlangıçta sola daha yakın */
+        }
+        50% {
+            transform: translateX(30%); /* Orta noktada */
+        }
+        100% {
+            transform: translateX(80%); /* Sağda bitiş */
+        }
+    }
+
+    /* Yazının çok geniş olmaması için düzenlemeler */
+    .moving-text {
+        width: 100%; /* Yazıyı tam genişlikte yapıyoruz */
+        text-align: center; /* Merkezi hizalamayı sağlıyoruz */
+    }
+}
 /* Ürünler Galerisi */
 .gallery {
     display: flex;
